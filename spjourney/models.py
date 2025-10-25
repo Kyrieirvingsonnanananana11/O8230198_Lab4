@@ -1,21 +1,24 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
+from django.db import models  # Import Django models
 
+# Model for learning journey entries
 class LearningJourney(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    date = models.DateField(auto_now_add=True)  # Automatically store when added
+    title = models.CharField(max_length=100)  # Title of the journey
+    description = models.TextField()          # Description
+    date = models.DateField(auto_now_add=True)  # Date added automatically
 
     def __str__(self):
-        return self.title
+        return self.title  # Display title in admin
 
+# Model for personal details
 class AboutMe(models.Model):
-    name = models.CharField(max_length=100)
-    bio = models.TextField()
-    email = models.EmailField(blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    name = models.CharField(max_length=100)  # Your name
+    bio = models.TextField()                 # Short bio
+    email = models.EmailField(blank=True)    # Email (optional)
+    created_at = models.DateTimeField(auto_now_add=True)  # Date created automatically
 
     def __str__(self):
-        return self.name
+        return self.name  # Display name in admin
+

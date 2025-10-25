@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from .models import LearningJourney, AboutMe
+from .models import LearningJourney, AboutMe  # Import models
 
-# Home page view
 def index(request):
-    journeys = LearningJourney.objects.all()  # get all records
-    return render(request, 'index.html', {'journeys': journeys})
+    journeys = LearningJourney.objects.all()  # Get all learning journey entries
+    return render(request, 'index.html', {'journeys': journeys})  # Render home page
 
-# About Me page view
 def about_me(request):
-    about = AboutMe.objects.first()  # get the first record
-    return render(request, 'aboutMe.html', {'about': about})
+    about = AboutMe.objects.first()  # Get first AboutMe entry
+    return render(request, 'aboutMe.html', {'about': about})  # Render About Me page
+

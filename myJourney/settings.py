@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'spjourney.apps.SpjourneyConfig',
+    'spjourney.apps.SpjourneyConfig', # i added this line to include the spjourney app
 ]
 
 MIDDLEWARE = [
